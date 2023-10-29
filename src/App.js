@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Footer from "./comp/Footer";
+import GridView from "./comp/GridView";
+import Header from "./comp/Header";
+import Marquee from "./comp/Marquee";
+import Startshere from "./comp/Startshere";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="h-full bg-bgBlue">
+        <div className="md:max-w-10xl md:mx-auto md:px-8 md:py-6 p-4 h-full text-txtColor">
+          <Header />
+        </div>
+        <Marquee />
+        <div className="md:max-w-10xl md:mx-auto md:px-8 md:py-6 p-4 h-full text-txtColor">
+          <GridView />
+        </div>
+      </div>
+      <div className="md:max-w-10xl md:mx-auto md:px-8 md:py-6 p-4 h-full">
+        <Startshere /><Footer />
+      </div>{" "}
+      
     </div>
   );
 }
